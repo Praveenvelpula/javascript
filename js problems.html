@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    //1, 1.	Create a function that takes two numbers as arguments and returns their sum.
+    
+    
+    function name(a,b){
+        return a+b;
+    }
+    console.log(name(5,10));
+   
+   
+   //2,	Write a function that takes an integer minutes and converts it to seconds.
+
+   
+   
+   function minutesToseconds(minutes){
+
+    return minutes*60;
+   }
+   console.log(minutesToseconds(6));
+
+
+
+//3.	Create a function that takes a number as an argument, increments the number by +1 and returns the result
+
+   
+   
+   function increment(num){
+    return num+1;
+   }
+   console.log(increment(5));
+   
+
+
+ //  4.	Create a function that takes the age in years and returns the age in days.
+
+
+
+    function ageindays(age){
+   return age*365;        
+    }
+    console.log(ageindays(29));
+
+
+//5.	sniCreate a function that takes voltage and current and returns the calculated power
+
+
+
+       function power(voltage,power){
+
+        return voltage*power;
+       }
+       console.log(power(12,2));
+
+  
+  //6.	Write a function that returns the string "something" joined with a space " " and the given argument a.     
+
+  
+  
+      function something(a){
+
+        return "something" +a;
+      }
+    console.log(something("praveen"));
+
+
+
+  //7.	Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.  
+     
+
+
+       function name(a,b){
+
+        return a===10||b===10||a+b===10;
+       }
+       console.log(name(5,6));
+
+//8.	Create a function that takes two strings as arguments and returns either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+
+
+
+        function stringlength(a,b){
+
+            return a.length===b.length;
+        }
+        console.log(stringlength("hello","world"));
+
+
+ //   9.	Create a function that takes a name and returns a greeting in the form of a string. Don't use a normal function, use an arrow function.       
+
+            
+             let greet=(name)=>{
+
+                return `Hello,${name}!`;
+             }
+             console.log(greet("praveen"));
+
+
+  //10.	Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).           
+
+
+           
+  //11.	Create a function that returns an array of strings sorted by length in ascending order.
+
+
+
+/*
+  let array=["cat","tiger","praveen","lion"];
+
+  function name(a,b){
+
+    return array.sort((a,b)=>a.length-b.length);
+  }
+  console.log(name());*/
+
+
+  
+   
+  //12.	Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
+   
+   function number(array){
+
+    let lnumber=[];
+    for(i=0;i<array.length;i++){
+     lnumber.push(Math.max(...array[i]));
+      
+   }
+   return lnumber
+  }
+  console.log(number([[1,2,3],[5,6,7],[7,8,9]]));
+  
+  
+
+  //13.	Create a function that takes an array of numbers and returns the second largest number
+
+       
+
+        function x(number){
+       let y=number.sort((a,b)=>b-a);
+
+        return y[1];
+   
+        }
+        console.log(x([1,3,5,7,9])); //second largest number    o/p=7
+
+   
+   //14.	Create a function that takes an array of items, removes all duplicate items and returns a new array in the same sequential order as the old array (minus duplicates).
+   
+
+
+ 
+            function rmd(items){
+
+              let x=[];
+              for(let i=0;i<items.length;i++){
+
+             if(!x.includes(items[i])){
+
+              x.push(items[i]);
+                       }
+               }
+              return x;
+
+            }
+            console.log(rmd([1,2,3,4,2,1,5]));
+   
+   
+  //15.	Create a function that takes an array of integers as an argument and returns a unique number from that array. All numbers except unique ones have the same number of occurrences in the array 
+   
+
+
+
+  //16.	Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
+   
+
+         function count(char,string){
+
+          let count=0;
+          for(let i=0;i<string.length;i++){
+
+           if(string[i]===char){
+
+            count++;
+
+         }
+   
+        }
+        return count;
+      }
+      console.log(count("a","praveen"));
+  
+
+  //17.	Create a function that takes a string and returns the number (count) of vowels contained within it.    
+  
+
+
+
+       function name(string){
+
+
+        let vowels="aeiouAEIOU";
+        let count=0;
+        
+        for(i=0;i<string.length;i++){
+
+        if(vowels.includes(string[i])){
+
+          count++;
+        }
+
+        }
+         return count;
+       }
+      console.log(name("praveen is a good boy"));
+
+            //or
+
+      var str=prompt("enter a name: ");
+       var count=0;
+       for(var i=0;i<str.length;i++){
+        if(str[i]=="a"||str[i]=="e"||str[i]=="i"||str[i]=="o"||str[i]=="u"){
+            count++;
+        }
+       }
+       console.log("number of vowels in "+str+" is: "+count);
+      
+        
+
+
+
+/*18.	Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+Example:
+reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"*/
+
+
+function reverse(string){
+
+let result="";
+for(let i=0;i<string.length;i++){
+
+  if(string[i]===string[i].toLowerCase()){
+
+  result+=string[i].toUpperCase();
+
+  }
+  else{
+    result+=string[i].toLowerCase();
+  }
+}
+  return result;
+
+}
+console.log(reverse("Happy Birthday"));
+
+
+//19.Take one integer n, loop till n and pass each value to a function, create a function that takes one integer parameter, and multiply with 2 in every integer.
+
+ 
+function multiply(n) {
+  return n * 2;
+}
+
+function loopandmultiply(n) {
+  for (let i = 1; i <= n; i++) {
+    let result = multiply(i);
+    console.log(result);
+  }
+}
+console.log(loopandmultiply(5));
+
+
+
+//20.Create Function that will take one parameter and return type of the data
+
+
+
+      function datatype(data){
+        return typeof data;
+      }
+      console.log(datatype(42));
+
+
+  //21.Program to find greatest of three numbers(using ternery operator).    
+
+
+  function greatest(a,b,c){
+
+    return a>b&&a>c?a:b>a&&b>c?b:c;
+  }
+   console.log(greatest(5,4,9));
+
+
+
+// 22 . C Program to find factorial of number.
+
+// 23. C Program to arrange numbers in ascending order
+
+// 24.Print Patter using loop.
+
+
+var str=''
+for(let i=1;i<6;i++){
+    str+=i+' '
+    console.log(str)
+}
+
+
+
+  
+ //25. C Program to Calculate the Power of a Number(using loop only).
+ 
+ //26.Program to Check Whether a Number is Prime or Not
+
+          //wrong
+
+   /*var num=7;
+    if(isPrime(num)){
+
+      console.log(num +"is prime" );
+    }
+    else{
+
+      console.log(num +"is not prime");
+    }*/
+
+
+
+
+
+
+// 28. Program to Display Characters from A to Z Using Loop with count.
+
+
+//29. Program to find a missing number
+
+
+
+//
+function vowels(){
+
+var a ="praveen is a good boy"
+
+var vowel=0
+
+var consonants=0
+
+
+var str =''
+var str1=''
+
+for(let i=0;i<a.length;i++){
+       let b = a[i]
+       
+        if(b=="a"||b=="e"||b=="i"||b=="o"||b=="u"){
+
+             str+=b+' '
+             
+             vowel++
+             
+    }
+    else{
+        str1+=b+' '
+        consonants++
+        
+    }
+}
+console.log(str+""+a+"count is" +vowel)
+
+console.log(str1+' '+a+ " count is "+consonants)
+
+}
+vowels()
+
+ 
+
+//32. Reverse a number using while Loop
+//reverse string
+
+var str="PRAVEEN";
+console.log(str);
+var output=str.split('').reverse().join('');
+console.log(output);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+    
+</body>
+</html>
